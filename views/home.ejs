@@ -1,0 +1,22 @@
+
+<%- include("partials/header"); -%>
+
+    <h1>Welcome to Daily Journal!</h1>
+    <br>
+  <p>Daily Journal is your go-to platform for sharing your thoughts, ideas, and stories with the world. Whether you're a seasoned writer or just starting, Daily Journal offers a simple and intuitive interface to create and publish your blog posts. Create a new post, edit existing ones, or browse through the latest entries from our community. With Daily Journal, it's easy to connect with like-minded individuals and discover new perspectives. Join us today and start journaling your daily thoughts and experiences!</p>
+  <hr>
+
+
+  <%  posts.forEach(function(post){ %>
+
+    <h1><%=post.title%></h1>
+    <p>
+    <%=post.content.substring(0, 100) + " ..."%>
+    <a href="/posts/<%=post._id%>">Read More</a>
+    </p>
+
+
+    <% }) %>
+
+
+<%- include("partials/footer"); -%>
